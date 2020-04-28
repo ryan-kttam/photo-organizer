@@ -21,4 +21,4 @@ def photo_organizer(file):
         os.utime(file_path, (access_dt, modified_dt.timestamp()))
     print ('All the files has been unzipped.')
 
-photo_organizer('Photos (4).zip')
+photo_organizer('sample_photos.zip')
