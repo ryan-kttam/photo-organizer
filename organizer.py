@@ -4,6 +4,7 @@ import os
 import time
 import datetime
 import pytz
+import sys
 
 
 class photoOrganizer:
@@ -41,5 +42,13 @@ class photoOrganizer:
 
         print ('All the files has been unzipped.')
 
-p = photoOrganizer('C:\Github\photo-organizer\sample_photos.zip')
-p.organize()
+
+def main():
+    arg = sys.argv[1]
+    print ('loading file:', arg)
+    p = photoOrganizer(arg)
+    p.organize()
+
+
+if __name__ == '__main__':
+    main()
